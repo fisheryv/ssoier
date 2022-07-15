@@ -12,14 +12,14 @@ int main()
     int s, r;
     for(int i = 0; i <= n; i++)
     {
-        s = a / b;
-        r = a % b;
-        a = r * 10;
-        if (r == 0 && i < n)
+        if (a == 0)
         {
             cout << 0;
             return 0;
         }
+        s = a / b;
+        r = a % b;
+        a = r * 10;
     }
     cout << s;
     return 0;
