@@ -7,24 +7,40 @@
 
 using namespace std;
 
+bool aboutSeven(int n)
+{
+    if (n % 7 == 0)
+    {
+        return true;
+    }
+    while (n > 0)
+    {
+        int a = n % 10;
+        if (a == 7)
+        {
+            return true;
+        }
+        n /= 10;
+    }
+    return false;
+}
+
 int main()
 {
-int n;
-long count = 0;
-cin >> n;
-if (n <= 1 || n >= 100)
-{
-    return -1;
-}
-for (int i = 1; i <= n; i++)
-{
-    int a = i % 10;
-    int b = i / 10;
-    if (a != 7 && b != 7 && i % 7 != 0)
+    int n;
+    long s = 0;
+    cin >> n;
+    if (n <= 1 || n >= 100)
     {
-        s += i * i;
+        return -1;
     }
-}
-cout << s;
-return 0;
+    for (int i = 1; i <= n; i++)
+    {
+        if (!aboutSeven(i))
+        {
+            s += i * i;
+        }
+    }
+    cout << s;
+    return 0;
 }
