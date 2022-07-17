@@ -6,8 +6,34 @@
 
 using namespace std;
 
-int main() {
-   setbuf(stdout, NULL);
-   printf("Hello, World!");
+int count_one(int m)
+{
+   int count = 0;
+   while (m > 0)
+   {
+      int num = m % 10;
+      if (num == 1)
+      {
+         count++;
+      }
+      m /= 10;
+   }
+   return count;
+}
+
+int main()
+{
+   int n;
+   long count = 0;
+   cin >> n;
+   if (n < 1 || n > 10000)
+   {
+      return -1;
+   }
+   for (int i = 1; i <= n; i++)
+   {
+      count += count_one(i);
+   }
+   cout << count;
    return 0;
 }

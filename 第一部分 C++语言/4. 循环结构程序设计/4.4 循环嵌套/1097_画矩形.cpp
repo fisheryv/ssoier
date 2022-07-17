@@ -6,9 +6,19 @@
  */
 
 #include <iostream>
+
 using namespace std;
 
-int main() {
-    cout << "Hello World!";
+int main() 
+{
+    int h, w;
+    char c;
+    int empty;
+    cin >> h >> w >> c >> empty;
+    if (h<3 || h>10 || w<5 || w>10)
+    {
+        return -1;
+    }
+    
     return 0;
 }
