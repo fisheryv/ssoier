@@ -7,7 +7,7 @@
 using namespace std;
 bool is_prime(int n)
 {
-    for (int i = 2; i < ceil(sqrt(n)); i++)
+    for (int i = 2; i <= ceil(sqrt(n)); i++)
     {
         if (n % i == 0)
         {
@@ -31,8 +31,8 @@ int main()
         {
             count++;
         }
-        n++;
+        num++;
     } 
-    cout << num;
+    cout << num - 1;
     return 0;
 }

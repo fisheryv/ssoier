@@ -19,38 +19,22 @@ int main()
     {
         return -1;
     }
-    if (empty == 1)
-    {
+
         for (int i = 1; i <= h; i++)
         {
             for (int j = 1; j <= w; j++)
             {
-            cout << c;
+                if (empty == 0 && (i != 1 && i != h) && (j!=1 && j!=w))
+                {
+                    cout << " ";
+                }
+                else{
+                    cout << c;
+                }               
             }
             cout << endl;
         }
-    }
-    else
-    {
-        for (int i = 1; i <= w; i++)
-        {
-            cout << c;
-        }
-        cout << endl;
-        for (int j = 1; j <= h - 2; j++)
-        {
-            cout << c;
-            for (int a = 1; a <= w - 2; a++)
-            {
-                cout << " ";
-            }
-            cout << c << endl;
-        }
-        for (int b = 1; b <= w; b++)
-        {
-            cout << c;
-        }
-    }
+    
     
     return 0;
 }

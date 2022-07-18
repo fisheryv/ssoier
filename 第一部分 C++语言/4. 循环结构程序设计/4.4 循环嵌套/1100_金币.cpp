@@ -13,7 +13,8 @@ using namespace std;
 
 int main()
 {
-    int n, s = 0, count = 1;
+    int n, count = 1, coin = 1, d = 0;
+    long sum = 0 ;
     cin >> n;
     if (n < 1 || n > 10000)
     {
@@ -21,11 +22,15 @@ int main()
     }
     while (count <= n)
     {
-        for (int i = 1; i <= count; i++)
-        {
-            s += count;
-        }
+        sum += coin;
         count++;
+        d++;
+        if (d == coin)
+        {
+            coin++;
+            d = 0;
+        }
     }
+    cout << sum;
     return 0;
 }

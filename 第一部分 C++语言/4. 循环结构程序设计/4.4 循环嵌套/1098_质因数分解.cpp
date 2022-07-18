@@ -19,7 +19,7 @@ int main()
         cout << n / 2;
         return 0;
     }
-    for (int i = 3; i < ceil(sqrt(n)); i += 2)
+    for (int i = 3; i <= ceil(sqrt(n)); i += 2)
     {
         if (n % i == 0)
         {
