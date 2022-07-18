@@ -9,15 +9,47 @@
 
 using namespace std;
 
-int main() 
+int main()
 {
     int h, w;
     char c;
     int empty;
     cin >> h >> w >> c >> empty;
-    if (h<3 || h>10 || w<5 || w>10)
+    if (h < 3 || h > 10 || w < 5 || w > 10)
     {
         return -1;
+    }
+    if (empty == 1)
+    {
+        for (int i = 1; i <= h; i++)
+        {
+            for (int j = 1; j <= w; j++)
+            {
+            cout << c;
+            }
+            cout << endl;
+        }
+    }
+    else
+    {
+        for (int i = 1; i <= w; i++)
+        {
+            cout << c;
+        }
+        cout << endl;
+        for (int j = 1; j <= h - 2; j++)
+        {
+            cout << c;
+            for (int a = 1; a <= w - 2; a++)
+            {
+                cout << " ";
+            }
+            cout << c << endl;
+        }
+        for (int b = 1; b <= w; b++)
+        {
+            cout << c;
+        }
     }
     
     return 0;

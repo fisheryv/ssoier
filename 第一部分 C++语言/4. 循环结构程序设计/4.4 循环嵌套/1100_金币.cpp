@@ -7,3 +7,25 @@
  *
  * 你需要编写一个程序，确定从第一天开始的给定天数内，骑士一共获得了多少金币。
  */
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n, s = 0, count = 1;
+    cin >> n;
+    if (n < 1 || n > 10000)
+    {
+        return -1;
+    }
+    while (count <= n)
+    {
+        for (int i = 1; i <= count; i++)
+        {
+            s += count;
+        }
+        count++;
+    }
+    return 0;
+}
