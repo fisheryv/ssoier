@@ -17,4 +17,5 @@ int main()
         n++;
     }
     cout << n - 1;
+    return 0;
 }
